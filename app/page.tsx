@@ -11,6 +11,10 @@ export default async function Home() {
     limit: 100,
   });
   console.log(products);
+  // const client = createClient(
+  //   process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  //   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  // );
 
   return (
     <div>

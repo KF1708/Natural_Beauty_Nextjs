@@ -6,6 +6,7 @@ export default async function ProductsPage() {
     expand: ["data.default_price"],
     limit: 100,
   });
+
   console.log(products);
   return (
     <div className="pb-8">
