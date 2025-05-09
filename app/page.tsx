@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Carousel } from "@/components/carousel";
+import { createClient } from "@supabase/supabase-js";
 
 export default async function Home() {
   const products = await stripe.products.list({
@@ -11,10 +12,11 @@ export default async function Home() {
     limit: 100,
   });
   console.log(products);
-  // const client = createClient(
-  //   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  //   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  // );
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const client = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+  );
 
   return (
     <div>
